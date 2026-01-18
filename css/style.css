@@ -1,0 +1,334 @@
+:root {
+    color-scheme: light dark;
+    
+    /* Semantic Colors using light-dark */
+    --bg-page: light-dark(#f5f7fa, #0f1115);
+    --bg-card: light-dark(#ffffff, #181b21);
+    --bg-input: light-dark(#f0f2f5, #22262e);
+    --text-main: light-dark(#1a1a1a, #ececec);
+    --text-muted: light-dark(#666666, #a0a0a0);
+    --border: light-dark(#e2e8f0, #2f3542);
+    --border-focus: light-dark(#3b82f6, #60a5fa);
+    --primary: light-dark(#2563eb, #3b82f6);
+    --primary-fg: #ffffff;
+    --shadow: light-dark(0 4px 20px -2px rgba(0,0,0,0.1), 0 4px 20px -2px rgba(0,0,0,0.5));
+    --radius: 16px;
+    --radius-sm: 8px;
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Header */
+.app-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.logo .icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Layout */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    width: 100%;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.icon-btn {
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--text-main);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background-color: var(--bg-input);
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-btn.secondary {
+    color: var(--text-muted);
+    background: transparent;
+}
+
+.nav-btn.secondary:hover {
+    color: var(--text-main);
+    background: var(--bg-input);
+}
+
+/* Cards & Selection Grids */
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.selection-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.selection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.input-field {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.input-field:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary);
+    color: var(--primary-fg);
+    padding: 1rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    filter: brightness(110%);
+    transform: scale(1.01);
+}
+
+/* Output Stage */
+.output-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.output-container.single {
+    grid-template-columns: 1fr;
+}
+
+.output-container.split {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .output-container.split {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.output-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.output-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.copy-btn {
+    background: var(--bg-input);
+    color: var(--text-main);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    display: flex;
+}
+
+.copy-btn:hover {
+    background: var(--border);
+}
+
+.copy-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.result-text {
+    width: 100%;
+    min-height: 150px;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: monospace;
+    font-size: 0.95rem;
+    resize: none;
+    line-height: 1.6;
+    outline: none;
+}
+
+/* Footer & Nav */
+.app-footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
