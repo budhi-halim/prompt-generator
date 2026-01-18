@@ -231,6 +231,10 @@ function renderOutput() {
 
     // 2. Construct Negative Prompt
     let negativeArray = [...styleData.negative.fixed];
+
+    if (isMerge) {
+      negativeArray = negativeArray.map(item => `no ${item}`);
+    }
     // If negative had dynamic fields, add them here.
     const negativeText = negativeArray.join(',\n');
 
@@ -240,7 +244,7 @@ function renderOutput() {
 
     if (isMerge) {
         // Single Text Area
-        const fullText = `${positiveText},\nno ${negativeText}`;
+        const fullText = `${positiveText},\n${negativeText}`;
         container.appendChild(createOutputBox('Full Prompt', fullText));
     } else {
         // Two Text Areas
