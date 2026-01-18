@@ -130,22 +130,62 @@
             "high resolution",
             "anime game character illustration",
             "AAA anime game promotional art quality",
-            "official game illustration rendering",
-            "high-end anime rendering pipeline",
+            "official high-budget game illustration rendering",
+            "cinematic anime character render",
 
-            "semi-realistic anime character rendering",
-            "anime character with strong 3D depth",
-            "physically inspired anime lighting model",
+            "intrinsic 3D anime rendering",
+            "semi-realistic anime character model",
+            "anime character with true 3D volume",
+            "strong volumetric depth in face and body",
+            "non-flat anime rendering",
+            "depth-first anime shading model",
+            "anime character with real spatial depth independent of lighting",
+            "physically based anime lighting model",
+            "structural light-independent form definition",
+            "material-aware anime rendering",
+
             "soft PBR-style material response",
             "realistic light falloff on anime surfaces",
+            "anime skin with realistic subsurface softness",
+            "soft skin translucency with depth",
+            "smooth skin gradients driven by form not lighting",
+            "face rendered with sculpted depth",
+            "cheeks, jaw, nose and brow with clear volume",
+
+            "anime body with solid spatial presence",
+            "torso rendered with cylindrical depth",
+            "arms and shoulders with rounded volume",
+
+            "anime clothing rendered with thickness",
+            "fabric with real volume and weight",
+            "cloth folds driven by structure not paint",
+            "zippers, seams and edges with depth",
+
+            "anime hair rendered with volume",
+            "layered hair mass with depth",
+            "anisotropic hair shading",
+            "strand clusters with light-independent depth",
+
+            "built-in ambient depth",
+            "form-based shading independent of lighting",
+            "depth cues preserved without color grading",
+            "rendered as a 3D character illustration not flat anime",
+
+            "professional character presentation",
+            "clean subject separation",
+            "sharp focus on character",
+            "depth of field as secondary effect",
+
             "subtle global illumination effect",
             "soft contact shadows",
             "clean ambient occlusion",
             "cinematic depth rendering",
+            "volumentric anime form rendering",
+            "solid geometry-driven shading",
 
             "smooth high-density color gradients",
             "advanced anime shading with depth layers",
-            "no flat cel-only shading",
+            "no ",
             "soft but structured highlights",
             "controlled specular response",
             "anime skin with realistic subsurface softness",
@@ -182,7 +222,9 @@
             "cinematic framing",
             "clean subject separation",
             "sharp focus on character",
-            "depth of field separation"
+            "depth of field separation",
+            "soft lighting combined with gentle ambient fill light, cool-toned highlights with subtle warm skin response",
+            "cinematic cool color grading with warm skin highlights"
           ],
           "dynamic": [
             "age",
@@ -198,7 +240,6 @@
             "camera_angle",
             "shot_type",
             "lighting style",
-            "color_grading",
             "mood"
           ]
         },
@@ -218,6 +259,34 @@
             "cartoonish body ratios",
             "oversized head",
             "undersized body",
+
+            "flat skin tones",
+            "paper-flat anatomy",
+            "illustration-only body rendering",
+            "flat skin tones",
+            "painted-on clothing",
+            "flat hair shapes",
+            "flat cel-only shading",
+
+            "flat anime rendering",
+            "2D-only illustration look",
+            "cel-shaded only style",
+            "painted-on shading",
+            "form-less coloring",
+
+            "flat face",
+            "flat torso",
+            "flat limbs",
+            "paper-cutout anatomy",
+
+            "low-depth character rendering",
+            "mobile game art style",
+            "budget anime illustration",
+            "visual novel style",
+
+            "chibi proportions",
+            "super-deformed anatomy",
+            "cartoonish body ratios",
 
             "extra fingers",
             "missing fingers",
@@ -268,7 +337,7 @@
             "signature",
             "cropped body parts",
             "cut-off hands",
-            "no cut-off feet",
+            "cut-off feet",
             "background bleeding into subject"
           ],
           "dynamic": []
